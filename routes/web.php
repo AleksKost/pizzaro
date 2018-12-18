@@ -1,15 +1,7 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+
+use Illuminate\Support\Facades\Mail;
 
 Route::get('/', function () {
     return view('pages/index');
@@ -18,4 +10,12 @@ Route::get('/', function () {
 Route::get('/food', function () {
     return view('pages/shop-grid-3-column');
 })->name('food');
+
+Route::get('/send-mail', function () {
+    $mail = new \App\Mail\UserSubscribed();
+    $mail ->subject = "Welcome";
+
+    Mail::to('kostenko289@gmail.com')->send($mail);
+})->name('food');
+
 
