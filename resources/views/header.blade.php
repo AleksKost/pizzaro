@@ -1,3 +1,6 @@
+@inject('menus', '\App\Services\GetItemsForMenuService')
+
+
 <header id="masthead" class="site-header header-v1"  style="background-image: none; ">
     <div class="col-full">
         <a class="skip-link screen-reader-text" href="#site-navigation">Skip to navigation</a>
@@ -14,7 +17,7 @@
                 <button class="menu-toggle" aria-controls="site-navigation" aria-expanded="false"><span class="close-icon"><i class="po po-close-delete"></i></span><span class="menu-icon"><i class="po po-menu-icon"></i></span><span class=" screen-reader-text">Menu</span></button>
                 <div class="primary-navigation">
                     <ul id="menu-main-menu" class="menu nav-menu" aria-expanded="false">
-                        <li class="menu-item"><a href="{{route('food')}}">Order Online</a></li>
+                        <li class="menu-item"><a href="#">Order Online</a></li>
                         <li class="yamm-fw menu-item menu-item-has-children">
                             <a href="about.html">Pages</a>
                             <ul class="sub-menu">
@@ -51,7 +54,7 @@
                                                                 <div class="menu-pages-menu-2-container">
                                                                     <ul id="menu-pages-menu-6" class="menu">
                                                                         <li class="nav-title menu-item"><a href="#">Shop Pages</a></li>
-                                                                        <li class="menu-item"><a href="{{route('food')}}">Shop Grid 3 Column</a></li>
+                                                                        <li class="menu-item"><a href="#">Shop Grid 3 Column</a></li>
                                                                         <li class="menu-item"><a href="shop-grid-4-column.html">Shop Grid 4 Column</a></li>
                                                                         <li class="menu-item"><a href="shop-grid-6-column.html">Shop Grid 6 Column</a></li>
                                                                         <li class="menu-item"><a href="shop-listing.html">Shop Listing</a></li>
@@ -121,14 +124,11 @@
                 <div class="handheld-navigation">
                     <span class="phm-close">Close</span>
                     <ul  class="menu">
-                        <li class="menu-item "><a href="{{route('food')}}"><i class="po po-pizza"></i>Pizza</a></li>
-                        <li class="menu-item "><a href="{{route('food')}}"><i class="po po-burger"></i>Burgers</a></li>
-                        <li class="menu-item "><a href="{{route('food')}}"><i class="po po-salads"></i>Salads</a></li>
-                        <li class="menu-item "><a href="{{route('food')}}"><i class="po po-tacos"></i>Tacos</a></li>
-                        <li class="menu-item "><a href="{{route('food')}}"><i class="po po-wraps"></i>Wraps</a></li>
-                        <li class="menu-item "><a href="{{route('food')}}"><i class="po po-fries"></i>Fries</a></li>
-                        <li class="menu-item "><a href="{{route('food')}}"><i class="po po-salads"></i>Salads</a></li>
-                        <li class="menu-item "><a href="{{route('food')}}"><i class="po po-drinks"></i>Drinks</a></li>
+
+                        @foreach($menus->getMenus() as $menu)
+                            <li class="menu-item"><a href="{{route('food', $menu->key)}}"><i class="po {{$menu->icon}}"></i>{{$menu->name}}</a></li>
+                        @endforeach
+
                     </ul>
                 </div>
             </nav>
@@ -162,15 +162,17 @@
         </div>
         <div class="pizzaro-secondary-navigation">
             <nav class="secondary-navigation"  aria-label="Secondary Navigation">
-                <ul  class="menu">
-                    <li class="menu-item"><a href="{{route('food')}}"><i class="po po-pizza"></i>Pizza</a></li>
-                    <li class="menu-item"><a href="{{route('food')}}"><i class="po po-burger"></i>Burgers</a></li>
-                    <li class="menu-item"><a href="{{route('food')}}"><i class="po po-salads"></i>Salads</a></li>
-                    <li class="menu-item"><a href="{{route('food')}}"><i class="po po-tacos"></i>Tacos</a></li>
-                    <li class="menu-item"><a href="{{route('food')}}"><i class="po po-wraps"></i>Wraps</a></li>
-                    <li class="menu-item"><a href="{{route('food')}}"><i class="po po-fries"></i>Fries</a></li>
-                    <li class="menu-item"><a href="{{route('food')}}"><i class="po po-salads"></i>Salads</a></li>
-                    <li class="menu-item"><a href="{{route('food')}}"><i class="po po-drinks"></i>Drinks</a></li>
+                <ul class="menu">
+                    @foreach($menus->getMenus() as $menu)
+                    <li class="menu-item"><a href="{{route('food', $menu->key)}}"><i class="po {{$menu->icon}}"></i>{{$menu->name}}</a></li>
+                    {{--<li class="menu-item"><a href="{{route('food')}}"><i class="po {{$menu->icon}}"></i>{{$menu->name}}</a></li>--}}
+                    {{--<li class="menu-item"><a href="{{route('food')}}"><i class="po {{$menu->icon}}"></i>{{$menu->name}}</a></li>--}}
+                    {{--<li class="menu-item"><a href="{{route('food')}}"><i class="po {{$menu->icon}}"></i>{{$menu->name}}</a></li>--}}
+                    {{--<li class="menu-item"><a href="{{route('food')}}"><i class="po {{$menu->icon}}"></i>{{$menu->name}}</a></li>--}}
+                    {{--<li class="menu-item"><a href="{{route('food')}}"><i class="po {{$menu->icon}}"></i>{{$menu->name}}</a></li>--}}
+                    {{--<li class="menu-item"><a href="{{route('food')}}"><i class="po {{$menu->icon}}"></i>{{$menu->name}}</a></li>--}}
+                    {{--<li class="menu-item"><a href="{{route('food')}}"><i class="po {{$menu->icon}}"></i>{{$menu->name}}</a></li>--}}
+                        @endforeach
                 </ul>
             </nav>
             <!-- #secondary-navigation -->

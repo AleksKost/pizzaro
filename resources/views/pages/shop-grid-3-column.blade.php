@@ -27,7 +27,7 @@
                                 <div class="product-inner">
                                     <div class="product-image-wrapper">
                                         <a href="single-product-v1.html" class="woocommerce-LoopProduct-link">
-                                            <img src="assets/images/products/p1.jpg" class="img-responsive" alt="">
+                                            <img src="/assets/images/products/p1.jpg" class="img-responsive" alt="">
                                         </a>
                                     </div>
                                     <div class="product-content-wrapper">
@@ -66,7 +66,7 @@
                                 <div class="product-inner">
                                     <div class="product-image-wrapper">
                                         <a href="single-product-v1.html" class="woocommerce-LoopProduct-link">
-                                            <img src="assets/images/products/p2.jpg" class="img-responsive" alt="">
+                                            <img src="/assets/images/products/p2.jpg" class="img-responsive" alt="">
                                         </a>
                                     </div>
                                     <div class="product-content-wrapper">
@@ -105,7 +105,7 @@
                                 <div class="product-inner">
                                     <div class="product-image-wrapper">
                                         <a href="single-product-v1.html" class="woocommerce-LoopProduct-link">
-                                            <img src="assets/images/products/p3.jpg" class="img-responsive" alt="">
+                                            <img src="/assets/images/products/p3.jpg" class="img-responsive" alt="">
                                         </a>
                                     </div>
                                     <div class="product-content-wrapper">
@@ -144,7 +144,7 @@
                                 <div class="product-inner">
                                     <div class="product-image-wrapper">
                                         <a href="single-product-v1.html" class="woocommerce-LoopProduct-link">
-                                            <img src="assets/images/products/p4.jpg" class="img-responsive" alt="">
+                                            <img src="/assets/images/products/p4.jpg" class="img-responsive" alt="">
                                         </a>
                                     </div>
                                     <div class="product-content-wrapper">
@@ -183,7 +183,7 @@
                                 <div class="product-inner">
                                     <div class="product-image-wrapper">
                                         <a href="single-product-v1.html" class="woocommerce-LoopProduct-link">
-                                            <img src="assets/images/products/p5.jpg" class="img-responsive" alt="">
+                                            <img src="/assets/images/products/p5.jpg" class="img-responsive" alt="">
                                         </a>
                                     </div>
                                     <div class="product-content-wrapper">
@@ -222,7 +222,7 @@
                                 <div class="product-inner">
                                     <div class="product-image-wrapper">
                                         <a href="single-product-v1.html" class="woocommerce-LoopProduct-link">
-                                            <img src="assets/images/products/p6.jpg" class="img-responsive" alt="">
+                                            <img src="/assets/images/products/p6.jpg" class="img-responsive" alt="">
                                         </a>
                                     </div>
                                     <div class="product-content-wrapper">
@@ -261,7 +261,7 @@
                                 <div class="product-inner">
                                     <div class="product-image-wrapper">
                                         <a href="single-product-v1.html" class="woocommerce-LoopProduct-link">
-                                            <img src="assets/images/products/p7.jpg" class="img-responsive" alt="">
+                                            <img src="/assets/images/products/p7.jpg" class="img-responsive" alt="">
                                         </a>
                                     </div>
                                     <div class="product-content-wrapper">
@@ -300,7 +300,7 @@
                                 <div class="product-inner">
                                     <div class="product-image-wrapper">
                                         <a href="single-product-v1.html" class="woocommerce-LoopProduct-link">
-                                            <img src="assets/images/products/p8.jpg" class="img-responsive" alt="">
+                                            <img src="/assets/images/products/p8.jpg" class="img-responsive" alt="">
                                         </a>
                                     </div>
                                     <div class="product-content-wrapper">
@@ -339,7 +339,7 @@
                                 <div class="product-inner">
                                     <div class="product-image-wrapper">
                                         <a href="single-product-v1.html" class="woocommerce-LoopProduct-link">
-                                            <img src="assets/images/products/p9.jpg" class="img-responsive" alt="">
+                                            <img src="/assets/images/products/p9.jpg" class="img-responsive" alt="">
                                         </a>
                                     </div>
                                     <div class="product-content-wrapper">

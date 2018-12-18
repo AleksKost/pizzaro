@@ -7,16 +7,16 @@ Route::get('/', function () {
     return view('pages/index');
 })->name('home');
 
-Route::get('/food', function () {
+Route::get('/food/{key}', function ($key) {
     return view('pages/shop-grid-3-column');
 })->name('food');
 
 Route::get('/send-mail', function () {
-    $mail = new \App\mail\UserSubscribed();
+    $mail = new \App\mail\UserSubscribed('email');
     $mail ->subject = "Welcome";
 
     Mail::to('kostenko289@gmail.com')->send($mail);
-})->name('food');
+})->name('/send-mail');
 
 Route::post('/subscribe', function (\Illuminate\Http\Request $request) {
     $subscriber = new \App\Subscriber();
