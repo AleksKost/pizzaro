@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Mail;
+namespace App\mail;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
@@ -16,9 +16,11 @@ class UserSubscribed extends Mailable
      *
      * @return void
      */
-    public function __construct()
+    public $email;
+
+    public function __construct(string $email)
     {
-        //
+        $this->email = $email;
     }
 
     /**
@@ -28,6 +30,6 @@ class UserSubscribed extends Mailable
      */
     public function build()
     {
-        return $this->view('Mails.user-subscribed', ['email' => 'kostenko289@gmail.com']);
+        return $this->view('mails.user-subscribed', ['email' => 'kostenko289@gmail.com']);
     }
 }

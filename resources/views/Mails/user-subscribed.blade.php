@@ -1,2 +1,2 @@
-<h1>WELCOME {{$email}}</h1>
-<h2> Thanks for the subscription</h2>
+<h1>HELLO {{$email}}</h1>
+<h2> Welcome to site!</h2>
