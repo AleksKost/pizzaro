@@ -12,7 +12,7 @@ Route::get('/food/{key}', function ($key) {
 })->name('food');
 
 Route::get('/send-mail', function () {
-    $mail = new \App\mail\UserSubscribed('email');
+    $mail = new \App\mail\UserSubscribed('kostenko289@gmail.com');
     $mail ->subject = "Welcome";
 
     Mail::to('kostenko289@gmail.com')->send($mail);
