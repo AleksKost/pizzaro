@@ -7,9 +7,7 @@ Route::get('/', function () {
     return view('pages/index');
 })->name('home');
 
-Route::get('/food/{key}', function ($key) {
-    return view('pages/shop-grid-3-column');
-})->name('food');
+Route::get('/food/{key}', '\\' . \App\Http\Controllers\ProductsAction::class) -> name('food');
 
 Route::get('/send-mail', function () {
     $mail = new \App\mail\UserSubscribed('kostenko289@gmail.com');
