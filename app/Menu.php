@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Menu extends Model
 {
-//    use SoftDeletes;
-//
-//    protected $menus = ['deleted_at'];
+    public function products(){
+//        return $this -> hasMany(Product::class);
+
+    }
 }

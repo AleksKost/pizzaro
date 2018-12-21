@@ -15,7 +15,9 @@ class ProductsAction extends Controller
      */
     public function __invoke(Request $request)
     {
-        $products = Product::withoutTrashed()->get();
+
+
+        $products = Product::withoutTrashed()->paginate(3);
         return view('pages/shop-grid-3-column', ['products' => $products]);
     }
 }

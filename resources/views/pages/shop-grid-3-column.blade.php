@@ -387,11 +387,23 @@
                 </div>
                 <nav class="woocommerce-pagination">
                     <ul class="page-numbers">
-                        <li><span class="page-numbers current">1</span></li>
-                        <li><a class="page-numbers" href="#">2</a></li>
-                        <li><a class="page-numbers" href="#">3</a></li>
-                        <li><a class="next page-numbers" href="#">Next Page &nbsp;&nbsp;&nbsp;→</a></li>
-                    </ul>
+
+                    @if($products-> currentPage()!=1)
+                        <li> <a class="next-page-numbers" href="?page=1">First Page</a></li>
+                        <li> <a class="next-page-numbers" href="{{$products->previousPageUrl()}}">Previous Page</a></li>
+                    @endif
+
+                       @for($count = 1; $count <= $products -> lastPage(); $count++)
+                                <li><a class="page-numbers @if ($count == $products -> currentPage()) current @endif" href="?page={{$count}}">{{$count}}</a></li>
+                        @endfor
+
+                        @if($products-> currentPage()!= $products-> lastPage())
+                        <li><a class="page-numbers" href="{{$products->nextPageUrl()}}">Next Page</a></li>
+                        <li><a class="page-numbers" href="?page={{$products ->lastPage()}}"> Last Page</a></li>
+                            @endif
+
+                        </ul>
+
                 </nav>
             </main>
             <!-- #main -->
